@@ -1,0 +1,12 @@
+def pal(n):
+    rev = 0
+    temp = n
+    
+    while(temp>0):
+        rem = n % 10 #finding last digit
+        rev = rev * 10 + rem 
+        temp = temp // 10 # updating the number(temp)
+        
+    return rev = n
+    
+    
