@@ -1,0 +1,12 @@
+def sumOfNatural(n):
+    return n*(n+1)//2
+    
+    
+def count(x):
+    res = 0
+    
+    while(x > 0):
+        res = res + 1
+        x = x //10
+    return res
+    
