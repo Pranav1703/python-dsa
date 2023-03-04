@@ -1,0 +1,17 @@
+
+
+def sieve(n):
+    isprime = [True for p in range(n+1)]
+    i = 2
+    while (i <= n):
+        if isprime[i] == True:
+            for j in range(i*i,n+1,i):                  
+                isprime[i]  = False
+        i += 1 
+        
+    for p in range(n+1):
+        if isprime[p] == True:
+            print(p)
+            
+            
+         # time -- O(nloglogn)
