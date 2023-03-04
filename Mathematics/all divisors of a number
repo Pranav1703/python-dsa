@@ -1,0 +1,28 @@
+def printDivisors(n):
+    i = 1
+    while(i*i<=n):
+        if(n%i == 0):                     #time- O(n^1/2)
+            print(i)                      
+            if(i != n/i):
+                print(n/i)
+        i+=1
+ #the above code prints the divisors but in random order
+ 
+        
+        
+
+
+#printing divisors in order 
+
+
+def printDivisors(n):
+    i = 1
+    while(i*i < n):       
+        if(n%i == 0):
+            print(i)
+        i+=1                           #time -- O(n^1/2)
+    while(i>=1):
+        if(n%i == 0):
+            print(n/i)
+        i-=1
+        
