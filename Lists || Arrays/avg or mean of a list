@@ -1,0 +1,20 @@
+def avg(l):
+    sum = 0
+    for i in l:
+        sum+=i
+    n = len(l)
+    return sum/n
+    
+    
+    
+    
+    
+# method 2
+
+def avg(l):
+    return sum(l)/len(l)
+    
+  
+    
+    
+  
