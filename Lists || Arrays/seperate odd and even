@@ -1,0 +1,16 @@
+def getEvenOdd(l):
+    odd =[]
+    even = []
+    for i in l:
+        if (i % 2 == 0):
+            even.append(i)
+        else:
+            odd.append(i)
+    return odd,even   #returns a tuple 
+    
+#to unpack the tuple
+
+odd,even = getEvenOdd(l)
+
+            
+        
