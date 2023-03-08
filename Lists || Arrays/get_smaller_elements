@@ -1,0 +1,6 @@
+def smallElements(l,x):
+    ans = []
+    for i in l:
+        if(i < x):
+            ans.append(i)
+    return ans
