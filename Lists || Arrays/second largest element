@@ -1,0 +1,14 @@
+def secondLargest(l)
+    if l<=1:
+        return none
+    lar = l[0]
+    slar = None
+    for i in range l[1:]:
+        if i > lar:
+            slar = lar
+            lar = x
+        elif i != lar:
+            if slar == None or slar < x:
+                slar = x
+             
+    return slar
