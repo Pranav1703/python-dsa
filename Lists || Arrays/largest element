@@ -1,0 +1,11 @@
+def getlarge(l):
+    if len(l) == 0:
+        return None
+    else:
+        res = l[0]
+        for i in range(0,len(l)):
+            if l[i] > res:
+                res = l[i]
+        return res
+        
+       
