@@ -1,0 +1,8 @@
+def revmovedup(arr,n):    #n = size of list
+    res = 1
+    for i in range(0,n):
+        if arr[res] != arr[i]:
+            arr[res] = arr[i]
+            res += 1
+           
+    return res
