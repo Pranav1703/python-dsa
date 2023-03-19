@@ -1,0 +1,4 @@
+def palindrome(str,start,end):
+    if start>=end:
+        retrun true
+    retrun (str[start] = str[end] and palindrome(str,start+1,end)
