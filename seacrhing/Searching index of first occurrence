@@ -13,4 +13,9 @@ def searchFirst(arr,x,low,high):
             return mid
         else:
         return searchFirst(arr,x,low,mid - 1)
-     
+        
+        
+        
+    #O(log N) aux space
+
+       
