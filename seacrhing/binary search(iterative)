@@ -2,6 +2,7 @@
 def binarySearch(l,x):
     low = 0
     high = len(l) - 1
+    mid = (low+high)//2
     while low <=high:
         if x == l[mid]:
             return mid
