@@ -2,3 +2,10 @@ def binarySearch(l,x,low,high):
     if low > high:
         return -1
     mid = (low+high)//2
+    if x == l[mid]:
+        return mid 
+    if x > l[mid]:
+        retrun binarySearch(l,x,mid + 1,high)
+    else:
+        return binarySearch(l,x,low,mid - 1)
+    
