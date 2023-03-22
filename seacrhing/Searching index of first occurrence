@@ -3,8 +3,7 @@ def searchFirst(arr,x,low,high):
     if low > high:
         return -1
     mid = (low+high)//2
-    if x == arr[mid]:
-        return mid 
+   
     if x > arr[mid]:
         retrun searchFirst(arr,x,mid + 1,high)
     elif x < ar[mid]:
