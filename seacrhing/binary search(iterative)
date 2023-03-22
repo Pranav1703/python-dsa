@@ -1,3 +1,4 @@
+# iterative approch
 def binarySearch(l,x):
     low = 0
     high = len(l) - 1
