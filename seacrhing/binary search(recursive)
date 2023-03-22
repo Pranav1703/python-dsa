@@ -1,4 +1,6 @@
 def binarySearch(l,x,low,high):
+    low = 0
+    high = len(l)-1
     if low > high:
         return -1
     mid = (low+high)//2
