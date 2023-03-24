@@ -1,9 +1,9 @@
 def firstOcc(arr,x):
     low = 0
     high = len(arr) - 1
-    mid = (low+high)//2
+    
     while low <=high:
-       
+        mid = (low+high)//2
         if x >arr[mid]:
             low = mid + 1
         elif x < arr[mid]: 
@@ -18,9 +18,9 @@ def firstOcc(arr,x):
 def lastOcc(arr,x):
      low = 0
     high = len(arr) - 1
-    mid = (low+high)//2
+    
     while low <=high:
-       
+        mid = (low+high)//2
         if x >arr[mid]:
             low = mid + 1
         elif x < arr[mid]:
