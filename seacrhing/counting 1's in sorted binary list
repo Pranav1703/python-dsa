@@ -1,7 +1,7 @@
-def firstOcc(arr,x):
+def firstOcc(arr):
     low = 0
     high = len(arr) - 1
-    
+    x = 1
     while low <=high:
         mid = (low+high)//2
         if x >arr[mid]:
@@ -15,10 +15,10 @@ def firstOcc(arr,x):
                 high = mid - 1
      return -1
  #time - O(log n)    
-def lastOcc(arr,x):
+def lastOcc(arr):
      low = 0
     high = len(arr) - 1
-    
+    x =1
     while low <=high:
         mid = (low+high)//2
         if x >arr[mid]:
@@ -36,8 +36,8 @@ def lastOcc(arr,x):
      
      
      
-def countOccOf_1(arr,x):
-    first = firstOcc(arr,x) #time - O(log n)
+def countOccOf_1(arr):
+    first = firstOcc(arr) #time - O(log n)
     n = len(arr) 
     if first == -1:
         return 0
