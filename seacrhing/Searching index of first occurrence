@@ -24,9 +24,9 @@ def searchFirst(arr,x,low,high):
 def searchFirst(arr,n,x):
     low = 0
     high = n - 1
-    mid = (low+high)//2
+    
     while low <=high:
-       
+        mid = (low+high)//2
         if x >arr[mid]:
             low = mid + 1
         elif x < arr[mid]:
