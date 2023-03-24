@@ -42,3 +42,19 @@ def countOcc(arr,x):
         return 0
     else:
         return lastOcc(arr,n)-first+1
+        
+        
+        
+        
+   '''     
+   ex:
+   x = 20,so we have to count occurences of 20
+   arr = [10,20,20,20,30,30]
+           0  1  2  3  4  5
+              *  *  *
+   first = 1
+   lastOcc(arr,n) returns value 3
+   lastOcc(arr,n)-first+1 = 3-1+1 = 3
+   20 occures 3 times
+        
+   '''
