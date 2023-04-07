@@ -1,0 +1,21 @@
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+        
+     
+def deleteLast(head):
+    if head == None:
+        return 
+       
+    if head.next == None:
+        return None
+        
+    curr = head
+     while curr.next.next != None:         #curr stops at 2nd node from last
+        curr = curr.next                     #deleting the lasst node by  assigning None to next pointer of 2nd node
+        
+     curr.next = None
+     return head
+     
+   
