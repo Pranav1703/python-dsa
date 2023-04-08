@@ -1,0 +1,4 @@
+def deleteNode(ptr):
+    temp = ptr.next
+    ptr.data=temp.data
+    ptr.next = temp.next
