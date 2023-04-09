@@ -1,0 +1,12 @@
+def removeDup(head):
+    curr = head
+    while curr != None and curr.next != None:
+        if curr.data == curr.next.data:
+            curr.next = curr.next.next
+        else:
+            curr = curr.next
+            
+            
+            
+    #no need to return head because it it not modified
+    
