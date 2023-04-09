@@ -17,16 +17,12 @@ def reverseList(head):
     
     
 #method 2
-def reverseList(head):
-    if head == None:
-        return head
+def reverseList(curr,prev = None):
+    if curr == None:
+        return prev
 
-    if head.next == None:
-        return head
+    next = curr.next
+    curr.next = prev
 
-    rest_head = reverseList(head.next)
-    rest_tail = head.next
-    rest_tail.next = head
-    head.next = None
+    return reverseList(next,curr)
 
-    return rest_head
