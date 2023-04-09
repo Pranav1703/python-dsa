@@ -1,0 +1,10 @@
+def middle(head):
+    if head == None:
+        return
+    slow = head
+    fast = head
+    while fast != None and fast.next != None:
+        slow = slow.next
+        fast = fast.next.next
+        
+    print(slow.data)
