@@ -1,0 +1,24 @@
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+        self.prev = None
+        
+def insertAtbegin(head,x):
+    if head!=None:
+        head.prev = temp
+    temp.next = head
+    return temp
+
+
+
+def printList(head):
+    curr = head
+    while curr!=None:
+        print(curr.data,end=" ")
+        curr=curr.next
+        
+head = None
+head = insertAtBegin(head,10)
+head = insertAtBegin(head,20)
+printList(head)
