@@ -5,7 +5,7 @@ def reverse(head):
         return None
     curr = head
     prev = none
-    while curr.next!=None:
+    while curr!=None:
         prev = curr
         curr.next,curr.prev = curr.prev,curr.next
         curr=curr.prev
