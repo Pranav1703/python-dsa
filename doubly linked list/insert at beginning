@@ -5,6 +5,7 @@ class Node:
         self.prev = None
         
 def insertAtbegin(head,x):
+    temp = Node(x)
     if head!=None:
         head.prev = temp
     temp.next = head
