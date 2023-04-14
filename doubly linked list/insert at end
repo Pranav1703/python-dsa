@@ -11,5 +11,8 @@ def insertatEnd(head,x):
         
     return head
     
+  #time - theta(n)
+  #if we maintain a tail pointer we can delete last node in constant time
+    
     
     
