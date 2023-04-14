@@ -1,0 +1,10 @@
+def deleteLast(head):
+    if head == None or head.next==None:
+        return none
+    else:
+    curr = head
+    while curr.next.next!=None:
+        curr=curr.next
+    curr.next = None
+    return head
+   
