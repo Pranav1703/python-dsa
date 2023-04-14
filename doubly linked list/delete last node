@@ -7,4 +7,7 @@ def deleteLast(head):
         curr=curr.next
     curr.next = None
     return head
+    
+#time - theta(N)    
+#if we maintain a tail pointer we can delete last node in constant time
    
