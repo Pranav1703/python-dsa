@@ -1,0 +1,28 @@
+# method -1(linear time)
+def insertAtBegin(head,data):
+    temp = Node(data)
+    if head == None:
+        temp.next = temp
+        return temp
+    curr = head
+    while curr.next!=None:
+        curr = curr.next
+    
+    curr.next = temp
+    temp.next = head
+    return temp
+    
+    
+    
+    
+    
+#method - 2(constant time)
+def insertAtBegin(head,data):
+    temp = Node(data)
+    if head == None:
+        temp.next = temp
+        return temp
+    temp.next = head.next
+    head.next = temp
+    head.data,temp.data = temp.data,head.data
+    return head
