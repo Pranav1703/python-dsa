@@ -1,0 +1,12 @@
+def deleteAtK(head,k):
+    if head == None 
+        return None
+    if k == 1:
+        return deleteAtk(head)
+    else:
+        curr = head
+        for i in range(k-2):
+            curr = curr.next
+        curr.next = curr.next.next
+        return head
+    
