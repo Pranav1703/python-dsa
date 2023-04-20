@@ -1,0 +1,19 @@
+#naive solution
+def delete(head):
+    if head==None and head.next == None:
+        return None
+    curr = head
+    while crr.next!=None:
+        curr=curr.next
+    curr.next = head.next
+    return curr.next
+    
+#efficient solution
+
+def deletehead(head):
+    if head==None and head.next == None:
+        return None
+    head.data = head.next.data
+    head.next = head.next.next
+    return head
+    
