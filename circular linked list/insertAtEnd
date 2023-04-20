@@ -1,0 +1,26 @@
+#naive solution
+def insetAtEnd(head,data):
+    temp = Node(data)
+    if head == None:
+        temp.next = temp
+        return temp
+    else:
+    curr = head
+    while curr.next!=None:
+        curr= curr.next
+    curr.next = temp
+    temp.next = head
+    return head
+    
+    
+#efficient method    
+def insertAtEnd(head,data):
+    temp = Node(data)
+    if head == None:
+        temp.next = temp
+        return temp
+        
+    temp.next = head.next
+    head.next = temp
+    head.data,temp.data = temp.data,head.data
+    return temp
