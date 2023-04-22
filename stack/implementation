@@ -1,1 +1,25 @@
+#list implementation
 
+stack = []
+#pushing data to stack
+stack.append(10)
+stack.append(20)    
+stack.append(30)
+stack.pop()  # deleting or poping last element    o/p: 30 
+top = stack[-1]                                        20
+size = len(stack)                                      2
+
+
+
+#deque implementation
+stack = deque()  #deque([])
+#pushing data to stack 
+stack.append(10)    #deque([10])
+stack.append(20)    #deque([10,20])
+stack.append(30)    #deque([10,20,30])
+stack.pop()  # deleting or poping last element       o/p: 30 
+top = stack[-1]                                           20
+size = len(stack)                                         2
+
+
+#linked list implementation
