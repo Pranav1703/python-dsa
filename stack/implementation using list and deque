@@ -22,4 +22,3 @@ top = stack[-1]                                           20
 size = len(stack)                                         2
 
 
-#linked list implementation
