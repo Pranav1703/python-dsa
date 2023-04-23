@@ -12,8 +12,8 @@ def isBalanced(exp):
                 stack.pop()
                 
     if stack:                     #checking if stack is empty after checking for '(','{','[' in the loop
-        return True                ususally the stack should be empty , if its noe empty then the experssion is not balanced
-    else:
+        return True                ususally the stack should be empty , if its noe empty then the experssion is not balanced. this checks for expressions like 
+    else:                          {{{}} there are 3 opening brackets and 2 closing brackets    
         return False
         
 
