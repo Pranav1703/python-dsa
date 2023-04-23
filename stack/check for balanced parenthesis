@@ -11,9 +11,8 @@ def isBalanced(exp):
             else:
                 stack.pop()
                 
-                
-    if stack:
-        return True
+    if stack:                     #checking if stack is empty after checking for '(','{','[' in the loop
+        return True                ususally the stack should be empty , if its noe empty then the experssion is not balanced
     else:
         return False
         
