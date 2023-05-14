@@ -1,0 +1,24 @@
+def InfixtoPostfix(self, exp):
+        #code here
+        s = []
+        st=''
+        op = ['+','-','/','*' , '(' , ')','^']
+        
+        precedence = {'-':1,'+':1,'*':2,'/':2,'^':3}
+        
+        for i in exp:
+            if i not in op:
+                st+=i
+            elif i=='(':
+                    s.append(i)
+            elif i==')':
+                while s and s[-1]!='(':
+                    st+=s.pop()
+                s.pop()
+            else:
+                while s and s[-1]!='(' and precedence[i] <= precedence[s[-1]]:
+                    st+=s.pop()
+                s.append(i)
+        while s:
+            st+=s.pop()
+        return st
