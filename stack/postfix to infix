@@ -1,0 +1,12 @@
+def postToInfix(self, postfix):
+        
+        s = []
+        
+        for i in postfix:
+            if i.isalpha():
+                s.append(i)
+            else:
+                b = s.pop()
+                a = s.pop()
+                s.append('('+a+i+b+')')
+        return s[0]
