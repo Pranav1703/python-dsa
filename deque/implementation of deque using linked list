@@ -1,4 +1,3 @@
-
 class Node:
     def __init__(self, k):
         self.key = k
@@ -18,7 +17,15 @@ class MyDeque:
     def isEmpty(self):
         return self.sz == 0
 
-    def insertfront(self):
+    def insertfront(self,x):
+        temp = Node(x)
+        if self.front == None: #checking if L.L is empty
+            self.front = temp
+        else:
+            self.front.prev = temp #adding newnode at the front updating front.prev to temp
+            temp.next = self.front #updating next pointer to old front 
+        self.front = temp          #
+        self.sz +=1
         
     def insertRear(self, x):
         temp = Node(x)
@@ -26,7 +33,7 @@ class MyDeque:
             self.front = temp
         else:
             self.rear.next = temp  #adding newnode at the rear
-            temp.prev = self.rear   #updating prev of newnode to previous rear
+            temp.prev = self.rear   #updating prev of newnode to old rear
         self.rear = temp            #updating newnode as rear
         self.sz = self.sz + 1
 
@@ -43,12 +50,46 @@ class MyDeque:
             self.sz = self.sz - 1    
 
             return res
-    def delete rear(self):
-    
+    def deleterear(self):
+        if self.rear == None:
+            return None
+        else:
+            res = self.rear.key   #storing rear data
+            self.rear =self.rear.prev #updating rear
+            if self.rear == None:  #checking if new rear is none (there is no element after deleting ) 
+                self.front == None  
+            else:
+                self.rear.next = None  #updating new rear node next to None
+            self.sz-=1
     def getFront(self):
         if self.front:
             return self.front.key
+        
 
     def getRear(self):
         if self.rear:
             return self.rear.key
+#main
+
+dq = MyDeque(3)
+
+print(dq.isEmpty())
+dq.insertRear(10)
+print(dq.getFront(),dq.getRear())
+dq.insertRear(20)
+print(dq.getFront(),dq.getRear())
+dq.insertRear(30)
+print(dq.getFront())
+dq.insertfront(69)
+print(dq.getFront(), dq.getRear())
+dq.deletfront()
+print(dq.getFront(), dq.getRear())
+
+
+output:
+True
+10 10
+10 20
+10
+69 30
+10 30
