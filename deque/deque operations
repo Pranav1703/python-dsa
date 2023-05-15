@@ -1,0 +1,11 @@
+from collections import deque
+d = deque()   #[]
+d.append(10)  #[10]
+d.append(20)  #[10,20]
+d.append(30)  #[10,20,30]
+d.appendleft(40) #[40,10,20,30]
+
+print(d)  #[40,10,20,30]           op:deque([]40,10,20,30)
+print(d.pop()) #[40,10,20]            30
+print(d.popleft()) #[10,20]           40
+print(d)                              deque([10,20])
