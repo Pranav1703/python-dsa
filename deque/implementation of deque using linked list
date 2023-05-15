@@ -1,1 +1,54 @@
 
+class Node:
+    def __init__(self, k):
+        self.key = k
+        self.next = None
+        self.prev = None
+
+
+class MyDeque:
+    def __init__(self, c):
+        self.front = None
+        self.rear = None
+        self.sz = 0
+
+    def size(self):
+        return self.sz
+
+    def isEmpty(self):
+        return self.sz == 0
+
+    def insertfront(self):
+        
+    def insertRear(self, x):
+        temp = Node(x)
+        if self.rear == None:  #this means linked list is empty
+            self.front = temp
+        else:
+            self.rear.next = temp  #adding newnode at the rear
+            temp.prev = self.rear   #updating prev of newnode to previous rear
+        self.rear = temp            #updating newnode as rear
+        self.sz = self.sz + 1
+
+    def deletfront(self):
+        if self.front == None:
+            return None
+        else:
+            res = self.front.key    #storing front data
+            self.front = self.front.next  #updating front 
+            if self.front == None:   #checking is there is one element
+                self.rear = None     #updating rear
+            else:
+                self.front.prev = None   #updating new front node's prev pointer to None
+            self.sz = self.sz - 1    
+
+            return res
+    def delete rear(self):
+    
+    def getFront(self):
+        if self.front:
+            return self.front.key
+
+    def getRear(self):
+        if self.rear:
+            return self.rear.key
