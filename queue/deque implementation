@@ -1,0 +1,17 @@
+from _collections import deque
+
+q = deque() #deque([])
+
+q.append(10) #deque([10])
+q.append(20) #deque([10,20])
+q.append(30) #deque([10,20,30])
+print(q)     op:#deque([10,20,30])
+print(q.popleft())  op:10
+q.append(40)        #deque(20,30,40])
+print(q.popleft())  op:20  #deque([30,40])
+print(len(q))       op:2
+print(q[0])         op:30
+print(q[-1])        op:40
+
+
+#every operation is O(1) time because deque imported from collections uses D.L.L and deleting front node and inserting operations takes const time 
