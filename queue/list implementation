@@ -1,0 +1,19 @@
+q = []
+q.append(10)  #[10]
+q.append(20)  #[10,20]
+q.append(30)  #[10,20,30]                                   #append-->enqueue
+print(q)         op:[10,20,30]                              #pop(0)-->dequeue
+print(q.pop(0))  op:10
+print(q)         op:[20,30]                           
+q.append(40)     #[20,30,40]
+print(q)         op:[20,30,40]
+print(q.pop(0))  op:20
+print(q)         op:[30,40]
+print(len(q))    op:2
+print(q[0])      op:[39]
+print(q[-1])     OP:[40]
+
+
+
+here we have one linear time complexity operation which is pop(0)
+this is the disadvantage of this list implementation
