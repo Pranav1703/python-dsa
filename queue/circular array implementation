@@ -1,6 +1,6 @@
 class Queue:
     def __init__(self,cap):
-        self.sap = cap
+        self.cap = cap
         self.q = [None]*cap
         self.front = 0
         self.size = 0
@@ -12,7 +12,7 @@ class Queue:
             return self.front
     
     def getRear(self):
-        if isEmpty():
+        if self.isEmpty():
             return -1
         else:
             return (self.front+self.size-1)%self.cap
@@ -26,17 +26,33 @@ class Queue:
         self.size +=1
     
     def deque(self):
-        if isEmpty():
+        if self.isEmpty():
             return None
         res = self.q[self.front]
+        self.q.pop(0)
         front = (self.front+1)%self.cap
         self.size-=1
+        
         return res
     
     def isEmpty(self):
-        return self.size =0
+        return self.size == 0
     def isFull(self):
-        return self.size = self.cap
-    
+        return self.size == self.cap
+    def print(self):
+        for i in range(self.size):
+            print(self.q[i])
+        
+        
+q = Queue(3)
+q.enque(10)
+q.enque(20)
+q.enque(30)
+
+
+print(q.deque())
+print(q.deque())
+
+q.print()
     
         
