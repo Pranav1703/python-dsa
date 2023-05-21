@@ -61,6 +61,7 @@ class MyDeque:
             else:
                 self.rear.next = None  #updating new rear node next to None
             self.sz-=1
+            return res
     def getFront(self):
         if self.front:
             return self.front.key
