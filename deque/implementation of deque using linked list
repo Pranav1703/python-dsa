@@ -20,7 +20,7 @@ class MyDeque:
     def insertfront(self,x):
         temp = Node(x)
         if self.front == None: #checking if L.L is empty
-            self.front = temp
+            self.rear = temp
         else:
             self.front.prev = temp #adding newnode at the front updating front.prev to temp
             temp.next = self.front #updating next pointer to old front 
