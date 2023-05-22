@@ -1,0 +1,24 @@
+class Node:
+    def __init__(self,k):
+        self.right = None
+        self.left = None
+        self.key = k
+        
+#driver code
+root = Node(10)
+root.left = Node(20)
+root.right = Node(30)
+root.left.left = Node(40) 
+
+
+
+                            10 ---> root node
+                           /  \
+                          20   30---->leaf node
+                         /
+                        40  --->leaf node
+                        
+                        
+                        
+           if binary tree is empty 
+           then root = None 
