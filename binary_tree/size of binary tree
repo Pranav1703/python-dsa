@@ -14,7 +14,15 @@ def treeSize(root):
         return ls + rs + 1
 
 
+#shoter implementation
 
+def treesize(root):
+    if root == None:
+        return 0
+    else:
+        ls = treesize(root.left)
+        rs = treesize(root.right)
+        return treesize(root.left) + treesize(root.right) + 1
 
 # Driver Code
 
