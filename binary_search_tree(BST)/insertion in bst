@@ -1,0 +1,43 @@
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.key = key
+        self.right = None
+
+#iterative approach
+def insert(root, key):
+    parent = None
+    curr = root
+
+    while curr != None:
+        parent = curr
+
+        if curr.key == key:
+            return root
+        elif curr.key < key:
+            curr = curr.left
+        else:
+            curr = curr.right
+
+    if parent == None:
+        return Node(key)
+
+    if parent.key > key:
+        parent.left = Node(key)
+    else:
+        parent.right = Node(key)
+
+    return root
+
+#recursive approach
+
+def insert(root,key):
+    if root == None:
+        return Node(key)
+    elif root.key == key:
+        return root
+    elif root.key>key;
+        root.left = insert(root.left,key)
+    elif root.key<key:
+        root.right = insert(root.right,key)
+    return root
