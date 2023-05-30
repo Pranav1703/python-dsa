@@ -8,9 +8,9 @@ class Node:
 
 def getSucc(curr, key):
     while curr.left != None:
-        curr = curr.left
-
-    return curr.key
+        curr = curr.left                     #this fuction returns the left most leaf node in the tree
+ 
+    return curr.key                         
 
 
 def deleteNode(root, key):
