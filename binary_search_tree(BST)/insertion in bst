@@ -14,7 +14,7 @@ def insert(root, key):
 
         if curr.key == key:
             return root
-        elif curr.key < key:
+        elif curr.key > key:
             curr = curr.left
         else:
             curr = curr.right
@@ -28,6 +28,24 @@ def insert(root, key):
         parent.right = Node(key)
 
     return root
+example and dry run: 
+
+                                     10
+                                    /  \                              
+                                   5    15
+                                       /  \
+                                     12    18
+                                 key = 20
+   
+   initially: curr = 10,parent = None
+   1st iteration:parent = 10,curr = 15
+   2nd iteration:parent = 15,curr = 18
+   3rd iteration:parent = 18,curr = None
+   loop breaks
+   since parent.key<key:
+          parent.right = key
+      
+
 
 #recursive approach
 
