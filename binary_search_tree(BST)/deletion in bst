@@ -8,9 +8,10 @@ class Node:
 
 def getSucc(curr, key):
     while curr.left != None:
-        curr = curr.left                     #this fuction returns the left most leaf node in the tree
- 
-    return curr.key                         
+        curr = curr.left                     #this fuction returns the left most node in the tree
+  
+    return curr.key                          #getSucc function returns inorder successor of the root node.inorder successor is the next node which comes next in inorder traversal 
+                                               or the closest next largest node w.r.t current node
 
 
 def deleteNode(root, key):
@@ -29,7 +30,7 @@ def deleteNode(root, key):
         elif root.right == None:
             return root.left      #root.left maybe be none or hae a value.In either of these cases we return left value 
         else:
-            succ = getSucc(root.right, key)  #getSucc function returns inorder successor of the root node.inorder successor is the next node which comes next in inorder traversal or the closest next largest node w.r.t current node
+            succ = getSucc(root.right, key)  #calling the function to find the left most node of the right subtree.the node may not be a leaf node
             root.key = succ          #replacing the root node to be deleted with its inorder successor
             root.right = deleteNode(root.right, succ)   #deleting the duplicate of the  successor in the tree
 
