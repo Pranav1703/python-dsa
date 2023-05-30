@@ -1,0 +1,45 @@
+#iterative approach
+def searchIterative(root, key):
+ 
+    # start with the root node
+    curr = root
+ 
+    # pointer to store the parent of the current node
+    parent = None
+ 
+    # traverse the tree and search for the key
+    while curr and curr.data != key:
+ 
+        # update the parent to the current node
+        parent = curr
+ 
+        # if the given key is less than the current node, go to the left subtree;
+        # otherwise, go to the right subtree
+        if key < curr.data:
+            curr = curr.left
+        else:
+            curr = curr.right
+   #time - O(h)
+   #aux space - O(1)
+            
+# recursive approach
+def searchIterative(root, key):
+ 
+    # start with the root node
+    curr = root
+ 
+    # pointer to store the parent of the current node
+    parent = None
+ 
+    # traverse the tree and search for the key
+    while curr and curr.data != key:
+ 
+        # update the parent to the current node
+        parent = curr
+ 
+        # if the given key is less than the current node, go to the left subtree;
+        # otherwise, go to the right subtree
+        if key < curr.data:
+            curr = curr.left
+        else:
+            curr = curr.right
