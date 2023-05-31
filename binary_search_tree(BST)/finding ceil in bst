@@ -1,0 +1,21 @@
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.key = key
+        self.right = None
+
+
+def getCeil(root, x):
+    res = None
+
+    while root != None:
+
+        if root.key == x:
+            return root
+        elif root.key < x:
+            root = root.right
+        else:               
+            res = root        #updating the greater value because it might be a potential ceil
+            root = root.left  #traversing left tree to check if there is smaller value than current root which is greater than key 
+ 
+    return res
