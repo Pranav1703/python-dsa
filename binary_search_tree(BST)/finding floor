@@ -1,0 +1,18 @@
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.key = key
+        self.right = None
+
+def getFloor(root,x):
+    res = None
+    while root!=None:
+        if root.key==x:
+            return root
+        elif root.key>x: 
+            root=root.left
+        else:                                 #in this case root value is less than x and it might be the floor value
+            res = root.key                    #updating the root value to res(result)
+            root = root.right                 #traversing right subtree to check if there is a value larger value the res which is smaller than x
+    return res
+  
