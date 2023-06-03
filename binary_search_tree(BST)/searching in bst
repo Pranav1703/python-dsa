@@ -23,23 +23,21 @@ def searchIterative(root, key):
    #aux space - O(1)
             
 # recursive approach
-def searchIterative(root, key):
+def search(root, key, parent):
  
-    # start with the root node
-    curr = root
+    # if the key is not present in the key
+    if root is None:
+        print('Key not found')
+        return
  
-    # pointer to store the parent of the current node
-    parent = None
+    # if the key is found
+    if root.data == key:
  
-    # traverse the tree and search for the key
-    while curr and curr.data != key:
- 
-        # update the parent to the current node
-        parent = curr
- 
-        # if the given key is less than the current node, go to the left subtree;
-        # otherwise, go to the right subtree
-        if key < curr.data:
-            curr = curr.left
+        if parent is None:
+            print(f'The node with key {key} is root node')
+        elif key < parent.data:
+            print('The given key is the left node of the node with key', parent.data)
         else:
-            curr = curr.right
+            print('The given key is the right node of the node with key', parent.data)
+ 
+        return
