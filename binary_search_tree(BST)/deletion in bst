@@ -29,7 +29,7 @@ def deleteNode(root, key):
             return root.right     #root.right maybe be none or hae a value.In either of these cases we return right value
         elif root.right == None:
             return root.left      #root.left maybe be none or hae a value.In either of these cases we return left value 
-        else:
+        else:                   #in this case both left and right node of root node are not none
             succ = getSucc(root.right, key)  #calling the function to find the left most node of the right subtree.the node may not be a leaf node
             root.key = succ          #replacing the root node to be deleted with its inorder successor
             root.right = deleteNode(root.right, succ)   #deleting the duplicate of the  successor in the tree
