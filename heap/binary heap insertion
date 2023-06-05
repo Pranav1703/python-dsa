@@ -1,0 +1,22 @@
+class myMinHeap:
+    def __init__(self):
+        self.arr = []  # list to store values of heap items
+
+    def parent(self, i): 
+        return (i - 1) // 2     #returns index of parent node
+
+    def lChild(self, i):
+        return 2 * i + 1     #returns index of left child
+
+    def rChild(self, i):
+        return 2 * i + 2    ##returns index of right child
+
+    def insert(self, x):
+        arr = self.arr
+        arr.append(x)
+        i = len(arr)-1
+
+        while i > 0 and arr[self.parent(i)] > arr[i]:
+            p = self.parent(i)   #storing index of parent node wrt to node with index i
+            arr[i], arr[p] = arr[p], arr[i]     # swap with parent with inserted node
+            i = p       #updating the current index of inserted node
