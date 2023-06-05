@@ -1,0 +1,56 @@
+import math
+
+
+class myMinHeap:
+    def __init__(self):
+        self.arr = []  # list to store values of heap items
+
+    def parent(self, i):
+        return (i - 1) // 2
+
+    def lChild(self, i):
+        return 2 * i + 1
+
+    def rChild(self, i):
+        return 2 * i + 2
+
+    def insert(self, x):
+        arr = self.arr
+        arr.append(x)
+        i = len(arr) - 1
+
+        while i > 0 and arr[self.parent(i)] > arr[i]:
+            p = self.parent(i)
+            arr[i], arr[p] = arr[p], arr[i]  # swap with parent
+            i = p
+
+    def minHeapify(self, i):
+        arr = self.arr
+        lt = self.lChild(i)   #storing index of left child
+        rt = self.rChild(i)   #storing index of right child
+
+        smallest = i          #initializing the index of  smallest value to i,which is the root 
+        n = len(arr)
+
+        if lt < n and arr[lt] < arr[smallest]:                #checking if left child is smaller 
+            smallest = lt                                      #updating smallest value
+        if rt < n and arr[rt] < arr[smallest]:                  #checking if right child is smaller 
+            smallest = rt                                       #updating smallest value
+                                                               #rt<n and lt<n are like base cases. if rt,lt>n it means we have reached the leaf node
+        if smallest != i:
+            arr[smallest], arr[i] = arr[i], arr[smallest]     #swapping element at index i with smallest value
+            self.minHeapify(smallest)
+   
+    def extractMin(self):
+        arr = self.arr
+        n = len(arr)
+  
+        if n == 0:    #if heap if empty
+            return math.inf
+        res = arr[0]     #storing min value
+
+        arr[0] = arr[n - 1]  # instead of swapping first and last elements , we assign value of last element to first index
+        arr.pop()             
+
+        self.minHeapify(0)
+        return res     
