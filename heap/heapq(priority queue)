@@ -1,0 +1,33 @@
+import heapq
+
+pq = [5, 20, 1, 30, 4]
+
+heapq.heapify(pq)  #converts into minheap
+print(pq)    #o/p: [1,4,5,30,20]
+
+heapq.heappush(pq, 3)   #inserting,after inserting uses heapify to reaarange values to maintain minheap   
+print(pq)      #o/p: [1,4,3,30,20,5] 
+
+print(heapq.heappop(pq)) #works same as extractmin op:1
+print(pq)              #o/p: [3,4,5,30,20]
+
+print(heapq.nlargest(2, pq))#prints the first 2 largest elements o/p:[30,20]
+ 
+print(heapq.nsmallest(2, pq)) #prints the first 2 smallest elements o/p:[3,4]
+
+pq = [5, 20, 1, 30, 4]
+
+heapq.heapify(pq)  # [1,4,5,30,20]
+print(pq)
+
+#pushpop() - first pushes 2 into the heap then calls pop() which pops the root of heap after pushing
+print(heapq.heappushpop(pq,2)) #o/p:1
+print(pq)                      #[2, 4, 5, 30, 20]
+
+#when we push a element smaller than root value and pop() the heap is not going to change
+print(heapq.heappushpop(pq,0))    #o/p:0
+print(pq)                      #[2, 4, 5, 30, 20]
+
+#heapreplace() always replaces th heap.when we call this function it replaces the root value with the value passed in the function
+print(heapq.heapreplace(pq,-1))   #o/p:2
+print(pq)                      #[-1, 4, 5, 30, 20]
