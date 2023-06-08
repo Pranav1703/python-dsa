@@ -73,7 +73,7 @@ def maxheapify(arr, n, i):
 def heapsort(arr):
     n=len(arr)
     buildheap(arr)
-    for i in range(n-1,0,-1);
+    for i in range(n-1,0,-1):
         arr[i],arr[0]=arr[0],arr[i]
         maxheapify(arr,i,0)
         
