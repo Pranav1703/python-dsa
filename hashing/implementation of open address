@@ -48,5 +48,6 @@ class MyHash:
                 return False
         return False
 
-
+#how to handle cases where -1,-2 can be input keys?
+   use None for empty slots
 
