@@ -1,0 +1,105 @@
+#CREATION
+s1 = {10, 20, 30}
+
+print(s1)                  #op-{10, 20, 30} orderr is not pre dedfined , 
+
+s2 = set([20, 30, 40])         
+ 
+print(s2)                  #op-{20, 30, 40}
+
+s3 = {}   #{} is also used for dictionaries 
+
+print(type(s3))            #<class,'dict'>
+
+s4 = set() #this is how to create a set
+
+print(type(s4))         #<class,'set'>
+print(s4)
+
+
+
+#INSERTION
+s = {10, 20}
+s.add(30)
+print(s) #op - {10,20,30}
+
+s.add(30)  # adding duplicate items. duplicate items do not add in the set
+print(s)   #op-{10,20,30}
+
+s.update([40, 50]) #update fuction addss items in other collections. we add
+
+print(s)  #op-{10,20,30,40,50}  #this order is not predefined the order might change
+
+s.update([60, 70], [80, 90])  # inserting multiple list
+
+print(s)     #op-{10,20,30,40,50,70,60,90,80}
+
+
+#REMOVAL
+s = {10, 30, 20, 40}
+
+s.discard(30)  #when a item which is not present in the set is passed then it will do ntg
+
+print(s) #op-{10,20, 40}
+
+s.remove(20)  #works like discard function but when a item which is not present in the set is passed then it will raise a error
+
+print(s)  #op-{10, 40} 
+
+s.clear()
+
+print(s) #op- set() (empty set)
+
+s.add(50)
+del s  #removes the object itself
+
+
+#OTHER OPERATIONS
+s ={10,3,21,4}
+print(len(s)) #op-4
+print(10 in s) #op-True
+print(20 in s) #op-False
+
+#OPERATIONS ON TWO SETS
+s1 = {2, 4, 6, 8}
+
+s2 = {3, 6, 9}
+
+print('union ', s1 | s2) #we can also use s1.union(s2) or vice-versa to find union
+print(s1.union(s2))  #op-{2,3,4,6,8,9}
+
+print('intersecton', s1 & s2)
+print(s1.intersection(s2))  #op-{6}
+
+print('present in s1, but not present in s2', s1 - s2)  #gives the elements present in s1 and not in s2
+print(s1.difference(s2)) #op-{2,4,8}
+
+print('symmetric differences, not present in both', s1 ^ s2) #it gives the elements in s1 and s2 but not common elements op-{2,3,4,8,9}
+
+#MORE OPERATIONS ON TWO SETS
+s1 = {2, 4, 6, 8}
+s2 = {4, 8}
+#isdisjoint()-returns True if there is not common elements in the two sets else False
+print('disjoint sets:', s1.isdisjoint(s2)) #op-False
+
+print('isSubset:', s1 <= s2) #<= or issubset()
+print(s1.issubset(s2)) #op-False
+
+print('proper set:', s1 < s2) #op-False
+
+print('s1 is superset of s2:', s1 >= s2)
+print(s1.issuperset(s2))#op-True
+
+print('s1 is proper superset of s2:', s1 > s2)#op-True
+
+
+
+
+
+
+
+
+
+
+
+
