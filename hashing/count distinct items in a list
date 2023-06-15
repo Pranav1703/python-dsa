@@ -1,3 +1,4 @@
+#method -1
 def cDistinct(l):
     res = 1
     
@@ -10,5 +11,12 @@ def cDistinct(l):
 l = [10,20,10,30,30,20]
 
 print(cDistinct(l))
+
+
+#method -2
+def cDistinct2(l):
+    return len(set(l))  #since set will have distinct elements,we can insert the elements in the list to set then find the len.that would the no of distinct elements
+
+print(cDistinct2(l))
 
 
