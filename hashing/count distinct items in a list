@@ -1,0 +1,14 @@
+def cDistinct(l):
+    res = 1
+    
+    for i in range(1,len(l)):#traversing from 2nd element
+        if l[i] not in l[0:i]: #checking if the element l[i] is present in the list 0 to i-1 (which contain the elements before l[i])
+            res = res+1 #incrementing if the element is distinct
+    
+    return res
+    
+l = [10,20,10,30,30,20]
+
+print(cDistinct(l))
+
+
