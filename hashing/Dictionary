@@ -1,0 +1,62 @@
+#CREATION    
+d = {110: 'abc', 101: 'xyz', 105: 'pqr'}
+
+print(d)  #op - {110: 'abc', 101: 'xyz', 105: 'pqr'}
+
+d = {}
+d['laptop'] = 40000 
+d['mobile'] = 15000
+d['earphone'] = 1000
+
+print(d)   #op - {'laptop': 40000, 'mobile':15000, 'earphone': 1000}
+print(d['mobile']) #op-15000
+
+#ACCESSING    
+d = {110: 'abc', 101: 'xyz', 105: 'pqr'}
+
+print(d.get(101)) #op- xyz
+#get()-a key is passed in the func,it returns the value corresponding to the key.if there is no vaule it returns None.
+if we pass any other string or number to the fuction it prints it instead of None but if we try to access a value with a key which is not present then it raises a error 
+
+print(d.get(125)) #op - None
+
+print(d.get(125, "NA"))#op - NA
+ #
+if 125 in d:
+    print(d[125])   
+else:                   
+    print("NA") 
+
+
+#REMOVAL
+d = {110: 'abc', 101: 'xyz', 105: 'pqr', 106: 'bcd'}
+
+d[101] = 'wxy' #updates the value corresponding to the key
+
+print(len(d)) #op-4
+
+print(d) #op - {110: 'abc', 101: 'wxy', 105: 'pqr', 106: 'bcd'}
+
+print('returning and removing 105', d.pop(105)) #op - pqr
+#pop()-key is passed in the func.removes and returns the value corresponding to the key 
+print('after removing 105', d) #op - {110: 'abc', 101: 'wxy', 106: 'bcd'}
+
+del d[106] #deletes the key:value pair it doesnot return the pair
+
+print(d) #op - {110: 'abc', 101: 'wxy'}
+
+d[108] = 'cde'
+print('returning and removing last inserted', d.popitem()) #op-(108,'cde')
+#popitem()-doesnot take any argument.return the key:value pair it removed as a tuple
+
+
+
+
+
+
+
+
+
+
+
+
