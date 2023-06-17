@@ -10,11 +10,9 @@ print(s1==s2) #False
 print(s1 != s2)  #True
 
 
-print("#############")
+print("abcd > abc ")#True
+print("ZAB">"ABC") #True
 
-print("abcd > abc ","abcd">"abc")
-print("ZAB>ABC","ZAB">"ABC")
+print("abc">"ABC") #True
 
-print("abc>ABC","abc">"ABC")
-
-print("x>abcd","x">"abcd")
+print("x">"abcd") #True   since first char ascii value is greater than a
