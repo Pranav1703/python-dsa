@@ -1,0 +1,25 @@
+#iterative method
+s = "abc"
+
+rev = ""
+
+for i in s:
+    rev = i+rev
+
+print(rev)
+'''
+1st iteration
+i="a"
+rev = "a"
+
+2:
+i="b"
+rev ="ba"
+
+3:
+i="c"
+rev="cba"
+'''
+
+#string slicing method
+print(s[::-1])
