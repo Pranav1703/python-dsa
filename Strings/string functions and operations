@@ -1,0 +1,26 @@
+#integer representation and charecter representation
+print(ord("a")) #op-97      chr to ord
+print(ord("A")) #op-65
+print(chr(97))  #op- a       ord to chr
+print(chr(65))  #op-A
+
+#indexing  
+s = "geek"
+
+print(s)  #op-geek
+print(s[0]) #op-g
+print(s[-1]) #op-k
+print(s[1])   #op-e
+print(s[-2])   #op-e
+
+#strings are immutable
+s = "geek"
+s[0] = "e"  # error: item assignment not supported
+print(s) #op-TypeError:'str' objecet does not support item assignment
+
+#multiline strings can be written in triple quotes,and double quotes are allowed in triple quote string
+s = """ Hi,
+This is python course.
+Hope you are enjoying it. """
+print(s)
+
