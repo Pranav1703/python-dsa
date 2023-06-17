@@ -1,31 +1,38 @@
-dp = [[-1]*1001]*1001
+#naive method
+# Check if a String is Subsequence of Other
 
-def isSubSequence(s1,s2,i,j):
-    if (i == 0 or j == 0):
-	    return 0
+def issubseq(s1,s2) :
+    i, j = 0, 0
+    while(i < len(s1) and j < len(s2)) :  #processing both strings and checking if the second string is sequencetially matched
+        if s1[i] == s2[j] :
+            j = j + 1 
+        i += 1 
+    if j == len(s2) :
+        return True
+    else :
+        return False
+        
+s1 = "ABCDEF"
+s2 = "ADE"
 
-    if (dp[i][j] != -1):
-	    return dp[i][j]
+print(issubseq(s1,s2))
 
-    if (s1[i - 1] == s2[j - 1]):
-	    dp[i][j] = 1 + isSubSequence(s1, s2, i - 1, j - 1)
-	    return dp[i][j]
 
-    else:
-	    dp[i][j] = isSubSequence(s1, s2, i, j - 1)
-	    return dp[i][j]
+#efficient method
+
+def isSubSeq(s1,s2,m,n):
+    if n==0:
+		return True
+	if m ==0:
+		return False
+	if s1[m-1]==s2[n-1]:
+		return isSubSeq(s1,s2,m-1,n-1)
+	else:
+		return isSubSeq(s1,s2,m-1,n)
 
 str1 = "gksrek"
 str2 = "geeksforgeeks"
 m = len(str1)
 n = len(str2)
 
-if (m > n):
-    print("NO")
-
-if (isSubSequence(str1, str2, m, n) == m):
-	print("YES")
-
-else:
-	print("NO")
 
