@@ -30,3 +30,46 @@ output:
 0
 8
 
+
+#functions
+s1 = "geeks"
+print(len(s1)) #5
+s2 = s1.upper()
+print(s2) #"GEEKS"
+s3 = s2.lower() 
+print(s3) #"geeks"
+print(s1.islower()) #True
+print(s2.isupper()) #True
+
+
+s = "GeeksforGeeks Python Course"
+print(s.startswith("Geeks"))#True
+print(s.endswith("Course"))#True
+print(s.startswith("Geeks", 1)) #False    # start index
+print(s.startswith("Geeks",8,len(s)))#True   # start index, last-index
+
+
+s1 = "geeks for geeks"
+
+print(s1.split())   # split by space ' '
+s2 = "geeks, for, geeks"
+print(s2.split(','))        # split by comma ','
+l = ["geeksforgeeks","python","course"]
+print(" ".join(l))          # join by space
+print(", ".join(l))         # join by comma
+
+
+s1 = "__geeksforgeeks__"
+#.strip() is used to revome a char from strings at the ends
+print(s1.strip("_"))  #geeksforgeeks   # strip from both side
+print(s1.lstrip('_'))  #geeksforgeeks__      #strip from left side
+print(s1.rstrip("_"))  #__geeksforgeeks      #strip from right side
+
+
+s1 = "geeks for geeks"
+s2 = "geeks"
+
+print(s1.find(s2)) #0  returns the index of found string
+print(s1.find("gfg")) #-1  returns -1 if string is not present
+n = len(s1)
+print(s1.find(s2,1,n)) #10 searches from start to end
