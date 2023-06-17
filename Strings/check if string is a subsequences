@@ -18,7 +18,7 @@ s2 = "ADE"
 print(issubseq(s1,s2))
 
 
-#efficient method
+#recursive method
 
 def isSubSeq(s1,s2,m,n):
     if n==0:
