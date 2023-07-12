@@ -7,7 +7,7 @@ def nonrep(st) :
         if fi[ord(st[i])] == -1 :
             fi[ord(st[i])] = i
         else :
-            fi[ord(st[i])] = -2 
+            fi[ord(st[i])] = -2 #if index is already visited
     res = sys.maxsize
     for i in range(CHAR) :
         if fi[i] >= 0 :
