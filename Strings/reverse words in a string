@@ -1,0 +1,15 @@
+def reverse(s, start, end):
+	while start < end:
+		s[start], s[end] = s[end], s[start]
+		start = start + 1
+		end -= 1
+
+def reverse_word(s):
+    n= len(s)
+    b= 0
+    for e in range(n):     -------
+        if s[e]==" ":            |
+            reverse(s,b,e-1)     | -- #reversing individual words except the last word.last word wont be reversed because there is no space after the last word
+            b +=1           ------
+    reverse(s,b,e-1) #reversing the last word 
+    reverse(s,0,n-1) #reversing the whole string
