@@ -1,0 +1,24 @@
+#using right shift
+def isKthBitSet(n, k):
+    if((n>>(k-1)) & 1):
+        print("SET")
+    else:
+        print("NOT SET")
+
+if __name__=='__main__':
+    n=5
+    k=3
+    isKthBitSet(n, k)
+
+#using left shift 
+def isKthBitSet(n, k):
+    if(n & (1<<(k-1))):
+        print("SET")
+    else:
+        print("NOT SET")
+
+if __name__=='__main__':
+    n=5
+    k=1 
+    isKthBitSet(n, k)
+
