@@ -5,10 +5,6 @@ def isKthBitSet(n, k):
     else:
         print("NOT SET")
 
-if __name__=='__main__':
-    n=5
-    k=3
-    isKthBitSet(n, k)
 
 #using left shift 
 def isKthBitSet(n, k):
@@ -17,8 +13,4 @@ def isKthBitSet(n, k):
     else:
         print("NOT SET")
 
-if __name__=='__main__':
-    n=5
-    k=1 
-    isKthBitSet(n, k)
 
